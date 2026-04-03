@@ -37,7 +37,7 @@ export default function Footer({ onPrivacy, onTerms, onContact }: FooterProps) {
           </a>
         </li>
       </ul>
-      <p className="text-[0.8rem] text-muted w-full mt-2 text-center">
+      <p className="text-[0.8rem] text-muted w-full mt-2 text-left md:text-center">
         © 2026 Highball Beta LLC. All rights reserved. Crakt is a product of
         Highball Beta LLC.
       </p>

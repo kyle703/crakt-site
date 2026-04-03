@@ -32,7 +32,7 @@ export default function About() {
         <div className="grid grid-cols-2 gap-6">
           {stats.map((s) => (
             <div key={s.label} className="border-l-[3px] border-accent pl-4">
-              <div className="font-head text-[2rem] font-black text-cream leading-none">
+              <div className="font-head text-[clamp(1.1rem,3.5vw,2rem)] font-black text-cream leading-none">
                 {s.num}
               </div>
               <div className="text-[0.8rem] text-muted uppercase tracking-[0.1em] mt-[0.3rem]">

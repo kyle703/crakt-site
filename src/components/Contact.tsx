@@ -10,7 +10,7 @@ export default function Contact() {
           <br />
           Let's Talk.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-8 md:mt-12">
           <div>
             <p className="text-muted leading-[1.8] mb-4">
               For general inquiries, partnership opportunities, or press

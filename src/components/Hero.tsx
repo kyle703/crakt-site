@@ -19,7 +19,7 @@ export default function Hero() {
           track progress, store your passes — all without sharing your data with
           the world.
         </p>
-        <div className="animate-fadeUp fadeUp-delay-4">
+        <div className="animate-fadeUp fadeUp-delay-4 flex flex-wrap gap-3">
           <a
             href="#features"
             className="inline-flex items-center gap-[0.6rem] bg-accent text-cream font-head text-base font-bold tracking-[0.12em] uppercase no-underline py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent-light hover:-translate-y-0.5 cursor-pointer border-none"
@@ -28,7 +28,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-[0.6rem] bg-transparent border border-accent/40 text-accent font-head text-base font-bold tracking-[0.12em] uppercase no-underline py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent/10 hover:-translate-y-0.5 cursor-pointer ml-4"
+            className="inline-flex items-center gap-[0.6rem] bg-transparent border border-accent/40 text-accent font-head text-base font-bold tracking-[0.12em] uppercase no-underline py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent/10 hover:-translate-y-0.5 cursor-pointer"
           >
             Get Notified
           </a>
