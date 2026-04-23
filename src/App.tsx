@@ -1,34 +1,45 @@
-import { useState, useCallback } from 'react'
+import { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import Support from './pages/Support'
 
-type Page = 'main' | 'privacy' | 'terms'
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const target = document.querySelector(hash)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return
+      }
+    }
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
+
+  return null
+}
 
 export default function App() {
-  const [page, setPage] = useState<Page>('main')
-
-  const showPage = useCallback((p: Page) => {
-    setPage(p)
-    window.scrollTo(0, 0)
-  }, [])
-
   return (
     <>
+      <ScrollManager />
       <div className="noise-overlay" />
       <Banner />
-      <Navbar onLogoClick={() => showPage('main')} />
-      {page === 'main' && <Home />}
-      {page === 'privacy' && <Privacy onBack={() => showPage('main')} />}
-      {page === 'terms' && <Terms onBack={() => showPage('main')} />}
-      <Footer
-        onPrivacy={() => showPage('privacy')}
-        onTerms={() => showPage('terms')}
-        onContact={() => showPage('main')}
-      />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+      <Footer />
     </>
   )
 }

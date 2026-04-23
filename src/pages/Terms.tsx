@@ -1,8 +1,6 @@
-interface TermsProps {
-  onBack: () => void
-}
+import { Link } from 'react-router-dom'
 
-export default function Terms({ onBack }: TermsProps) {
+export default function Terms() {
   return (
     <div className="max-w-[800px] mx-auto pt-32 px-6 md:px-12 pb-16">
       <h1 className="font-head text-[3rem] font-black uppercase text-accent mb-2">
@@ -109,12 +107,12 @@ export default function Terms({ onBack }: TermsProps) {
         </a>
       </p>
       <br />
-      <button
-        onClick={onBack}
-        className="inline-flex items-center gap-[0.6rem] bg-accent text-cream font-head text-base font-bold tracking-[0.12em] uppercase py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent-light hover:-translate-y-0.5 cursor-pointer border-none"
+      <Link
+        to="/"
+        className="inline-flex items-center gap-[0.6rem] bg-accent text-cream font-head text-base font-bold tracking-[0.12em] uppercase py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent-light hover:-translate-y-0.5 cursor-pointer border-none no-underline"
       >
         ← Back to Site
-      </button>
+      </Link>
     </div>
   )
 }
