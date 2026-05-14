@@ -34,14 +34,6 @@ export default function Navbar() {
             About
           </Link>
         </li>
-        <li>
-          <Link
-            to="/#contact"
-            className="text-muted no-underline text-[0.85rem] font-medium tracking-[0.1em] uppercase transition-colors duration-200 hover:text-accent"
-          >
-            Contact
-          </Link>
-        </li>
       </ul>
     </nav>
   )
