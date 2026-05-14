@@ -20,6 +20,14 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            to="/#screenshots"
+            className="text-muted no-underline text-[0.85rem] font-medium tracking-[0.1em] uppercase transition-colors duration-200 hover:text-accent"
+          >
+            Screens
+          </Link>
+        </li>
+        <li>
+          <Link
             to="/#about"
             className="text-muted no-underline text-[0.85rem] font-medium tracking-[0.1em] uppercase transition-colors duration-200 hover:text-accent"
           >

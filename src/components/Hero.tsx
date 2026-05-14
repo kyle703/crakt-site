@@ -1,3 +1,5 @@
+import { TESTFLIGHT_URL } from '../constants'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-36 px-6 pb-12 md:pt-40 md:px-12 md:pb-16 overflow-hidden">
@@ -27,10 +29,12 @@ export default function Hero() {
             See Features
           </a>
           <a
-            href="#contact"
+            href={TESTFLIGHT_URL}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-[0.6rem] bg-transparent border border-accent/40 text-accent font-head text-base font-bold tracking-[0.12em] uppercase no-underline py-[0.9rem] px-8 rounded-[3px] transition-all duration-200 hover:bg-accent/10 hover:-translate-y-0.5 cursor-pointer"
           >
-            Get Notified
+            Join TestFlight
           </a>
         </div>
       </div>

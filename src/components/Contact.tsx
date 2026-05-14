@@ -1,3 +1,5 @@
+import { TESTFLIGHT_URL } from '../constants'
+
 export default function Contact() {
   return (
     <section id="contact" className="relative z-[1] bg-navy-mid/30">
@@ -26,8 +28,16 @@ export default function Contact() {
               </a>
             </p>
             <p className="text-muted leading-[1.8] mb-4">
-              Want to be notified when Crakt launches on the App Store? Drop us
-              an email with &ldquo;Notify Me&rdquo; in the subject line.
+              Prefer to try Crakt right away? Join the beta on{' '}
+              <a
+                href={TESTFLIGHT_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent no-underline hover:underline"
+              >
+                TestFlight
+              </a>
+              .
             </p>
           </div>
           <div>
