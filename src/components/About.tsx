@@ -1,45 +1,40 @@
-const stats = [
-  { num: 'V / Font / French / UIAA', label: 'All major grade systems' },
-  { num: 'Boulder + Rope', label: 'All climb disciplines' },
-  { num: '100%', label: 'Offline capable' },
-  { num: '0', label: 'Ads. Ever.' },
-]
+import { APP_STORE_LIVE, primaryCta } from '../constants'
 
 export default function About() {
   return (
-    <section id="about" className="relative z-[1]">
-      <div className="max-w-[1100px] mx-auto py-16 px-6 md:py-24 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section id="about" className="relative z-[1] px-5 md:px-12 py-16 md:py-24 scroll-mt-24">
+      <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <p className="font-head text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">
-            The Company
-          </p>
-          <h2 className="font-head text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold uppercase leading-none mb-6">
-            Highball
-            <br />
-            Beta LLC
+          <p className="eyebrow text-accent mb-4">The company</p>
+          <h2 className="font-head font-black text-[clamp(2.1rem,4.5vw,3.3rem)] leading-[1.02] tracking-[-0.015em] mb-6">
+            Highball Beta LLC
           </h2>
-          <p className="text-base leading-[1.8] text-muted mb-5">
-            Highball Beta LLC is an independent software company based in
-            Virginia, building tools for the climbing community. Crakt is our
-            flagship product.
+          <p className="text-[1.05rem] leading-[1.8] text-muted mb-5">
+            Highball Beta is an independent software company in Richmond, Virginia, building tools
+            for the climbing community. crakt is our flagship product.
           </p>
-          <p className="text-base leading-[1.8] text-muted mb-5">
-            We're climbers building for climbers — obsessing over the details
-            that matter when you're pumped at the crux and need your app to just
-            work.
+          <p className="text-[1.05rem] leading-[1.8] text-muted">
+            We climb, and we built crakt for the session: big tap targets for chalky hands, numbers
+            you can read pumped, and nothing between you and the next attempt.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6">
-          {stats.map((s) => (
-            <div key={s.label} className="border-l-[3px] border-accent pl-4">
-              <div className="font-head text-[clamp(1.1rem,3.5vw,2rem)] font-black text-cream leading-none">
-                {s.num}
-              </div>
-              <div className="text-[0.8rem] text-muted uppercase tracking-[0.1em] mt-[0.3rem]">
-                {s.label}
-              </div>
-            </div>
-          ))}
+
+        <div className="ink-surface rounded-[2rem] border border-white/10 p-8 md:p-10 text-center">
+          <img src="/brand/app-icon.webp" alt="crakt app icon" width={112} height={112} className="mx-auto rounded-[26px] shadow-[0_20px_40px_-10px_rgba(247,105,32,0.5)]" />
+          <h3 className="font-head font-black text-[1.9rem] mt-6 mb-2">Ready to climb?</h3>
+          <p className="text-muted mb-7">
+            {APP_STORE_LIVE
+              ? 'Free on the App Store for iPhone.'
+              : 'In App Store review now. Get it today on TestFlight.'}
+          </p>
+          <a
+            href={primaryCta.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block font-head font-extrabold text-white bg-accent hover:bg-accent-light no-underline py-3.5 px-8 rounded-full shadow-[0_10px_30px_-8px_rgba(247,105,32,0.7)] transition-colors duration-200"
+          >
+            {primaryCta.label}
+          </a>
         </div>
       </div>
     </section>
